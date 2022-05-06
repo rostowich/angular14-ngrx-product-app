@@ -17,20 +17,20 @@
       "available": true
     },
     {
-      "name": "Laptop",
-      "price": "1000",
-      "quantity": "57",
-      "selected": true,
-      "available": false,
-      "id": 3
+      "id": 3,
+      "name": "Tables",
+      "price": 4300,
+      "quantity": 600,
+      "selected": false,
+      "available": true
     },
     {
-      "id": 4,
-      "name": "Tables",
-      "price": "200",
-      "quantity": "890",
+      "name": "Imprimantes",
+      "price": "20",
+      "quantity": "45",
       "selected": true,
-      "available": true
+      "available": true,
+      "id": 5
     }
   ]
 }

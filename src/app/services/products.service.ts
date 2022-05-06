@@ -27,19 +27,18 @@ export class ProductsService{
   }
 
   select(product:Product) : Observable<Product>{
-    product.selected = !product.selected;
-    return this.http.put<Product>(environment.host+"/products/"+product.id, product);
+    return this.http.put<Product>(environment.host+"/products/"+product.id, {...product, selected : !product.selected});
   }
 
-  delete(product:Product) : Observable<void>{
-    return this.http.delete<void>(environment.host+"/products/"+product.id);
+  delete(id : number) : Observable<void>{
+    return this.http.delete<void>(environment.host+"/products/"+id);
   }
 
   save(product:Product) : Observable<Product>{
     return this.http.post<Product>(environment.host+"/products", product);
   }
 
-  getAProduct(id:number) : Observable<Product>{
+  getAProductById(id:number) : Observable<Product>{
     return this.http.get<Product>(environment.host+"/products/"+id);
   }
 
